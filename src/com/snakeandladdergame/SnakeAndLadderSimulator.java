@@ -11,6 +11,7 @@ public class SnakeAndLadderSimulator {
 
 		int playerPosition = 0;
 		int prevPosition = 0;
+		int dieCount=0;
 
 		while (true) {
 
@@ -47,10 +48,12 @@ public class SnakeAndLadderSimulator {
 
 			}
 			prevPosition = playerPosition;
+			dieCount++;
 			if (playerPosition >= WIN_POSITION) {
 				break;
 			}
 		}
+		System.out.println("the die was rolled "+dieCount+" times to win the game");
 	}
 
 }
